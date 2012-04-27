@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script src="js/components.js" type="text/javascript"></script>
+    <title>Uitk Demos</title>
+</head>
+<body>
+    <header>
+        <h1>Uitk Demos</h1>
+    </header>
+    <div class="container">
+        <section>
+            <h2>Overlay</h2>
+            <a data-overlay=".overlay-demo" data-role="overlay-trigger" href="#">Click me to trigger and overlay</a>
+            <div class="overlay overlay-demo">
+                <p>I'm an overlay!</p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2012 <a href="http://mikeball.us">MDB</a></p>
+    </footer>
+    <div id="overlay-mask"></div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('[data-role="overlay-trigger"]').live('click', function () {
+            TK.components.overlay.init();
+        });
+    });
+    </script>
+</body>
+</html>
